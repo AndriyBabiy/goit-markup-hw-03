@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -97,7 +101,7 @@ button {
   border-bottom: 1px solid var(--cornflower, #E7E9FC);
 }
 
-.top-bar-container {
+.top-bar .container {
   display: flex;
   align-items: center;
 }
@@ -110,6 +114,7 @@ button {
 .top-bar-nav {
   display: flex;
   margin-right: auto;
+  align-items: center;
 }
 
 .top-bar-list {
@@ -160,21 +165,20 @@ button {
 /* #region hero */
 .hero {
   background-color: var(--navyblue);
-  margin-bottom: 120px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-container {
+.hero .container {
   display: flex;
   flex-direction: column;
   padding: 188px 0;
 }
 
 .hero-title {
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
 
   color: #fff;
@@ -188,7 +192,8 @@ button {
 }
 
 .hero-button {
-  display: inline-flex;
+  display: block;
+  min-width: 169px;
   padding: 16px 32px;
 
   margin: 0 auto;
@@ -226,7 +231,7 @@ button {
 
 .process {
   display: flex;
-  margin-bottom: 120px;
+  padding: 120px 0;
 }
 
 .process-item {
@@ -234,7 +239,6 @@ button {
   flex-direction: column;
   align-items: flex-start;
   width: 264px;
-  gap: 8px;
 }
 
 .process-item-heading {
@@ -243,6 +247,8 @@ button {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
+  margin-bottom: 8px;
 }
 
 .process-item-text {
@@ -253,7 +259,7 @@ button {
 }
 
 .offering {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .team {
@@ -264,11 +270,9 @@ button {
 
 .team-member {
   display: inline-flex;
-  padding-bottom: 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
 
   border-radius: 0px 0px 4px 4px;
   background: var(--white, #FFF);
@@ -278,10 +282,10 @@ button {
 .card-text {
   display: flex;
   width: 232px;
+  padding: 32px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
 }
 
 .team-member-name {
@@ -290,6 +294,10 @@ button {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
+
+  margin-bottom: 8px;
+
+  text-align: center;
 }
 
 .team-member-role {
@@ -297,6 +305,8 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+
+  text-align: center;
 }
 /* #endregion */
 
@@ -307,7 +317,8 @@ button {
 }
 
 .footer-logo {
-  margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer .text-studio {
@@ -324,7 +335,7 @@ button {
 /* #endregion */
 
 /* #region portfolio main */
-.portfolio-container {
+.portfolio .container {
   padding-top: 96px;
   padding-bottom: 120px;
 }
@@ -354,6 +365,7 @@ button {
   letter-spacing: 0.04em;
 
   border: 1px solid var(--cornflower);
+  border-radius: 4px;
   background: var(--cloud);
 }
 
@@ -361,12 +373,14 @@ button {
 .filters-button:focus {
   color: #fff;
   background-color: var(--ocean);
+  border: 1px solid transparent;
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-item {
@@ -377,12 +391,15 @@ button {
   display: flex;
   flex-direction: column;
 
-  gap: 8px;
   padding: 32px 16px;
 
   border: 1px solid var(--cornflower, #E7E9FC);
   border-top: none;
   background: var(--white, #FFF);
+}
+
+.portfolio-header {
+  margin-bottom: 8px;
 }
 
 .portfolio-classifier {
