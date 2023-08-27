@@ -169,12 +169,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 188px 0;
 }
 
 .hero .container {
   display: flex;
   flex-direction: column;
-  padding: 188px 0;
 }
 
 .hero-title {
@@ -335,7 +336,7 @@ button {
 /* #endregion */
 
 /* #region portfolio main */
-.portfolio .container {
+.portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
 }
